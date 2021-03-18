@@ -12,7 +12,7 @@ mkdir $target
 
 if [ $1 = '-h' ]
 then
-echo -e "HELP\n $line \nsyntax of tool:\n bash autobuster.sh Domainlist Wordlist Threads"
+echo -e "HELP\n $line \nsyntax of tool:\n bash autobuster.sh [DOMAIN_LIST] [WORDLIST] [THREADS]"
 echo $line
 fi
 
@@ -22,8 +22,9 @@ do
    echo "Running gobuster on $i subdomains"
 done
 
-for ((i = 0 ; i <= $linenum ; i++));
+for ((i = 0 ; i<=$linenum ; i++));
 do
-    domain=`head -n $i $1 `
-    gobuster dir -u https://$domain -w $2 -t $3 -o $target/domain$i.txt  -s "200,301,307,401,403"
+    domain=`sed -n "${i}p" $1`
+    echo "Running gobuster for the $i. time"
+    gobuster dir -u https://$domain  -w $2 -t $3 -o $target/domain$i.txt -k || gobuster dir -u http://$domain  -w $2 -t $3 -o $target/domain$i.txt -k || echo 'fuck'
 done
