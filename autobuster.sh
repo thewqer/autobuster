@@ -1,7 +1,13 @@
 #!/bin/bash
 line='-----------------'
 echo $line
-echo 'Autobuster - Gobuster automation tool'
+echo -e " 
+  _         _        _               _            
+  /_\  _   _| |_ ___ | |__  _   _ ___| |_ ___ _ __ 
+ //_\\| | | | __/ _ \| '_ \| | | / __| __/ _ \ '__|
+/  _  \ |_| | || (_) | |_) | |_| \__ \ ||  __/ |   
+\_/ \_/\__,_|\__\___/|_.__/ \__,_|___/\__\___|_|     
+                                       -by @wqer"
 echo $line
 echo 'use -h for help'
 echo $line
