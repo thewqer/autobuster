@@ -8,7 +8,7 @@ echo $line
 echo 'Specify the target name:'
 read target
 echo $line
-mkdir $target$currentDate
+mkdir $target
 
 if [ $1 = '-h' ]
 then
