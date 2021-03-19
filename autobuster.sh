@@ -32,5 +32,5 @@ for ((i = 0 ; i<=$linenum ; i++));
 do
     domain=`sed -n "${i}p" $1`
     echo "Running gobuster for the $i. time"
-    gobuster dir -u https://$domain  -w $2 -t $3 -o $target/domain$i.txt -k || gobuster dir -u http://$domain  -w $2 -t $3 -o $target/domain$i.txt -k || echo 'fuck'
+    gobuster dir -u https://$domain  -w $2 -t $3 -o $target/domain$i.txt -k || gobuster dir -u http://$domain  -w $2 -t $3 -o $target/domain$i.txt -k || echo 'invalid domain'
 done
