@@ -27,6 +27,7 @@ for i in $linenum
 do
    echo "Running gobuster on $i subdomains"
 done
+echo $line
 
 for ((i = 0 ; i<=$linenum ; i++));
 do
