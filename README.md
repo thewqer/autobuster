@@ -10,3 +10,7 @@ Autobuster is a script written to automate gobuster scans
 `cd autobuster`
 
 `./autobuster [DOMAIN_LIST] [WORDLIST] [THREADS]`
+
+## Requirements
+
+- gobuster
